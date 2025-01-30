@@ -1,0 +1,31 @@
+{
+  "name": "agit",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+"scripts": {
+  "start": "webpack serve --mode development",
+  "build-main": "webpack --config webpack.main.config.js",
+  "build": "npm run build-main && webpack --mode production && electron-builder",
+  "electron": "npm run build-main && cross-env NODE_ENV=development electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@electron/remote": "^2.1.2",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "cross-env": "^7.0.3",
+    "electron": "^34.0.2",
+    "electron-builder": "^25.1.8",
+    "ts-loader": "^9.5.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
